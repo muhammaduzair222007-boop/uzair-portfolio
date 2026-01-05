@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azan Sakhawat - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrap">
+            <div class="logo">UZAIR<span>.</span></div>
+            <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#academic">Academic</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-btn" onclick="toggleTheme()">🌙 Theme</button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Muhammad Uzair</h1>
+            <p class="reg">REG NO: 10-001-2025-01827</p>
+            <p class="bio">
+                A passionate Computer Science student at UET Peshawar, Abbottabad Campus. 
+                Currently doing Bachelor's degree in 1st semester with strong interest in 
+                Artificial Intelligence. Learning programming and basics of computer. 
+                Always eager to learn and create innovative solutions.
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/muhammaduzair222007-boop" target="_blank" rel="noopener" class="social-btn">
+                    <span class="social-icon">💻</span> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/muhammad-uzair-b633823a3/" target="_blank" rel="noopener" class="social-btn">
+                    <span class="social-icon">💼</span> LinkedIn
+                </a>
+                <a href="mailto:muhammaduzair222007@gmail.com" class="social-btn">
+                    <span class="social-icon">📧</span> Email
+                </a>
+            </div>
+        </div>
+        <img src="profile.jpg" alt="Muhammad Uzair" class="hero-img">
+    </section>
+
+    <div class="container">
+        <section class="section" id="academic">
+            <h2 class="section-title">Academic Background</h2>
+            <p class="section-desc">My educational journey from school to university</p>
+            <div class="card">
+                <div class="controls">
+                    <input type="text" id="search" placeholder="🔍 Search..." onkeyup="filterTable()">
+                    <select id="filter" onchange="filterTable()">
+                        <option value="">All Levels</option>
+                        <option value="Matriculation">Matriculation</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Undergraduate">Undergraduate</option>
+                    </select>
+                </div>
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Level ▲▼</th>
+                            <th onclick="sortTable(1)">Institution ▲▼</th>
+                            <th onclick="sortTable(2)">Year ▲▼</th>
+                            <th onclick="sortTable(3)">Grade ▲▼</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <tr>
+                            <td>Matriculation</td>
+                            <td>The Peace Group of Schools & College, Mansehra</td>
+                            <td>2023</td>
+                            <td>A Grade</td>
+                        </tr>
+                        <tr>
+                            <td>Intermediate</td>
+                            <td>The Peace Group of Schools & College, Mansehra</td>
+                            <td>2025</td>
+                            <td>A Grade</td>
+                        </tr>
+                        <tr>
+                            <td>Undergraduate</td>
+                            <td>UET Peshawar (Abbottabad Campus)</td>
+                            <td>2025-Present</td>
+                            <td>In Progress</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section" id="cv">
+            <h2 class="section-title">Curriculum Vitae</h2>
+            <p class="section-desc">Download or view my complete CV</p>
+            <div class="card">
+                <div style="text-align: center; padding: 2rem;">
+                    <div class="cv-icon">📄</div>
+                    <h3 style="margin-bottom: 1rem;">My Curriculum Vitae</h3>
+                    <p style="margin-bottom: 2rem;">View or download my complete CV in PDF format</p>
+                    <div class="cv-btns" style="display: flex;">
+                        <button class="btn btn-primary" onclick="viewCV()">View CV</button>
+                        <a href="Uzair_CV.pdf" download="Uzair_CV.pdf" class="btn btn-secondary" style="text-decoration: none; display: inline-block;">Download CV</a>
+                    </div>
+                </div>
+                <iframe id="cvFrame" class="cv-viewer" src="Uzair_CV.pdf"></iframe>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO DEVELOPMENT PROGRESS TRACKER (BONUS FEATURE) - COMPACT -->
+        <section class="section" id="progress">
+            <h2 class="section-title">Portfolio Development Progress</h2>
+            <p class="section-desc">Development stages of this portfolio website</p>
+            <div class="card">
+                <div class="progress-grid">
+                    <div class="progress-mini">
+                        <span class="progress-label">HTML</span>
+                        <div class="progress-mini-bar"><div class="progress-mini-fill" style="width: 100%"></div></div>
+                        <span class="progress-mini-percent">100%</span>
+                    </div>
+                    <div class="progress-mini">
+                        <span class="progress-label">CSS</span>
+                        <div class="progress-mini-bar"><div class="progress-mini-fill" style="width: 100%"></div></div>
+                        <span class="progress-mini-percent">100%</span>
+                    </div>
+                    <div class="progress-mini">
+                        <span class="progress-label">JavaScript</span>
+                        <div class="progress-mini-bar"><div class="progress-mini-fill" style="width: 100%"></div></div>
+                        <span class="progress-mini-percent">100%</span>
+                    </div>
+                    <div class="progress-mini">
+                        <span class="progress-label">Responsive</span>
+                        <div class="progress-mini-bar"><div class="progress-mini-fill" style="width: 100%"></div></div>
+                        <span class="progress-mini-percent">100%</span>
+                    </div>
+                    <div class="progress-mini">
+                        <span class="progress-label">Theme</span>
+                        <div class="progress-mini-bar"><div class="progress-mini-fill" style="width: 100%"></div></div>
+                        <span class="progress-mini-percent">100%</span>
+                    </div>
+                    <div class="progress-mini">
+                        <span class="progress-label">Testing</span>
+                        <div class="progress-mini-bar"><div class="progress-mini-fill" style="width: 100%"></div></div>
+                        <span class="progress-mini-percent">100%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-desc">Showcase of my work and achievements</p>
+            <div class="projects-grid" id="projectGrid">
+                
+                <!-- Project 1: Portfolio Website -->
+                <div class="project">
+                    <div class="project-img" style="display:flex;align-items:center;justify-content:center;font-size:3rem;color:white;background:linear-gradient(135deg, #dc2626, #b91c1c);">
+                        🌐
+                    </div>
+                    <div class="project-body">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>A dynamic and responsive personal portfolio built with HTML, CSS, and JavaScript. Features include theme switcher, responsive design, and interactive elements.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-desc">Feel free to reach out for collaborations or inquiries</p>
+            <div class="card">
+                <!-- SIMPLE MAILTO FORM (NO VERIFICATION NEEDED) -->
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required minlength="2">
+                        <div class="error" id="nameErr"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error" id="emailErr"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="msg">Your Message *</label>
+                        <textarea id="msg" name="message" required minlength="10"></textarea>
+                        <div class="error" id="msgErr"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    <p style="text-align: center; margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                        <em>Click "Send Message" and your email client will open with the message ready to send</em>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>Muhammad Uzair</strong></p>
+            <p>UET Peshawar - Abbottabad Campus | Computer Science Department</p>
+            <div class="footer-social">
+                <a href="https://github.com/muhammaduzair222007-boop" target="_blank" rel="noopener" title="GitHub">💻</a>
+                <a href="https://www.linkedin.com/in/muhammad-uzair-b633823a3/" target="_blank" rel="noopener" title="LinkedIn">💼</a>
+                <a href="mailto:muhammaduzair222007@gmail.com" title="Email">📧</a>
+            </div>
+            <p>&copy; 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
